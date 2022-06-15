@@ -132,14 +132,14 @@ public class ErrorPageFilter implements Filter, ErrorPageRegistry, Ordered {
 			}
 		}
 		catch (Throwable ex) {
-			Throwable exceptionToHandle = ex;
-			if (ex instanceof NestedServletException) {
-				Throwable rootCause = ((NestedServletException) ex).getRootCause();
-				if (rootCause != null) {
-					exceptionToHandle = rootCause;
-				}
-			}
-			handleException(request, response, wrapped, exceptionToHandle);
+//			Throwable exceptionToHandle = ex;
+//			if (ex instanceof NestedServletException) {
+//				Throwable rootCause = ((NestedServletException) ex).getRootCause();
+//				if (rootCause != null) {
+//					exceptionToHandle = rootCause;
+//				}
+//			}
+//			handleException(request, response, wrapped, exceptionToHandle);
 			response.flushBuffer();
 		}
 	}
